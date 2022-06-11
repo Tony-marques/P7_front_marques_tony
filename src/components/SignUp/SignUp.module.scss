@@ -1,0 +1,79 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 450px;
+  align-items: center;
+  background: #5d6079;
+  border: 1px solid #fd2d01;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+
+  input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #dddfe2;
+    outline: none;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: black;
+    }
+  }
+
+  input[type="button"] {
+    cursor: pointer;
+  }
+  hr {
+    height: 1px;
+    background-color: #FFD7D7;
+    width: 100%;
+    border: none;
+  }
+
+  .loginBtn {
+    background: #ffd7d7;
+    color: #4e5166;
+    font-weight: bold;
+    border: 1px solid transparent;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background: white;
+      color: #4e5166;
+      border-color: #4e5166;
+    }
+  }
+
+  .accountBtn {
+    width: 50%;
+    background: #ffd7d7;
+    color: #4e5166;
+    font-weight: bold;
+    transition: all 0.3s;
+
+    &:hover {
+      background: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    max-width: 500px;
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 0.6rem;
+    .accountBtn {
+      width: 100% !important;
+    }
+
+    .loginBtn {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.usersContainer {
+  background: transparent;
+  border-radius: 5px;
+  padding: 0.75rem;
+  width: 100%;
+  width: 700px;
+  max-height: 95vh;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .usersContainer {
+    padding: 0.75rem;
+    width: 70%;
+  }
+}
+
+.usersContainer::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .usersContainer {
+    width: 95%;
+    max-height: calc(95vh - 80px);
+    top: 2%;
+    padding: 0.5rem;
+  }
+  .usersContainer .admin {
+    width: 9%;
+  }
+  .usersContainer .email {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=AllUsers.module.css.map */

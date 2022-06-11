@@ -1,0 +1,76 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 350px;
+  align-items: center;
+  background: #5d6079;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #fd2d01;
+  transition: all 0.3s;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+
+  input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px dashed transparent;
+    transition: border-color 0.3s;
+    outline: none;
+  }
+
+  input[type="button"] {
+    cursor: pointer;
+  }
+  hr {
+    width: 100%;
+    border-top: 1px solid #ffd7d7;
+    border-bottom: none;
+  }
+
+  .loginBtn {
+    background: #ffd7d7;
+    color: white;
+    font-weight: bold;
+    border: 1px solid transparent;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    color: #4e5166;
+
+    &:hover {
+      background: white;
+      border-color: #4e5166;
+    }
+  }
+
+  .accountBtn {
+    width: 50%;
+    background: #ffd7d7;
+    color: #4e5166;
+    font-weight: bold;
+    transition: all 0.3s;
+
+    &:hover {
+      background: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    max-width: 500px;
+    width: 90%;
+    height: 300px;
+    margin: 2rem auto;
+    font-size: 0.6rem;
+    .accountBtn {
+      width: 100% !important;
+    }
+
+    .loginBtn {
+      font-size: 1rem;
+    }
+  }
+}

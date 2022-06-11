@@ -1,0 +1,74 @@
+.personnalsPosts {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+
+  .postsContainer {
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin: 0 auto;
+    width: 700px;
+    max-height: 95vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .postsContainer::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .personnalsPosts {
+    width: 70%;
+    .postsContainer {
+      padding: 0.75rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .personnalsPosts {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    .postsContainer {
+      max-height: calc(95vh - 80px);
+      display: flex;
+      align-items: center;
+      width: 95%;
+    }
+  }
+}
+
+.emptyPost {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #ffd7d7;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-stripes-light.png");
+  border-radius: 5px;
+  padding: 1rem;
+  width: 100%;
+
+  button {
+    padding: 0.75rem 1.25rem;
+    background: #fd2d01;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-stripes-light.png");
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #fff;
+
+    &:hover {
+      background: #fff;
+      border-color: #fd2d01;
+      color: black;
+    }
+  }
+}

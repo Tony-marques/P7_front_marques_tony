@@ -1,0 +1,391 @@
+.postContainer {
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.post {
+  border-radius: 5px;
+  background: #5d6079;
+  border: 1px solid #fd2d01;
+  position: relative;
+  transition: box-shadow 0.3s;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .imgUrl {
+    max-width: 100%;
+    min-width: 50%;
+    object-fit: cover;
+    background-size: cover;
+    margin: 1rem 0;
+  }
+
+  .postHeader {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: white;
+    position: relative;
+    border-bottom: 1px solid #75778d;
+
+    .delete {
+      margin-left: auto;
+      background: transparent;
+      font-size: 1.2rem;
+
+      &:hover {
+        color: #fd2d01;
+      }
+    }
+
+    .dates {
+      font-size: 0.8rem;
+    }
+    .postProfil {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-right: 1rem;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #fff;
+      }
+    }
+  }
+
+  .postBody {
+    word-break: break-all;
+    padding: 1rem;
+    text-align: left;
+    max-height: 150px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    flex-wrap: wrap;
+    color: #fff;
+  }
+
+  .postHeaderName {
+    font-weight: bold;
+    color: #ffd7d7;
+  }
+
+  span {
+    margin: 0 1rem 1rem 1rem;
+    color: #ffd7d7;
+    font-size: 1.5rem;
+  }
+
+  textarea {
+    background: #75778d;
+    width: 100%;
+    resize: none;
+    outline: none;
+
+    &:focus {
+      border-color: #fd2d01 !important;
+    }
+  }
+
+  .imgContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .inputImgContainer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      input {
+        display: none;
+      }
+
+      label {
+        i {
+          font-size: 4rem;
+          background: #fd2d01;
+          width: 100px;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .imgContainerbis {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .inputImgContainerbis {
+      input {
+        display: none;
+      }
+
+      label {
+        i {
+          font-size: 4rem;
+          background: #fd2d01;
+          width: 100px;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  button {
+    padding: 0.75rem;
+    border: none;
+    border: 1px solid transparent;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .updateButton {
+    background: transparent;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    &:hover {
+      color: green;
+
+      i {
+        color: green;
+      }
+    }
+  }
+
+  .btnChevron {
+    background: transparent;
+    color: #fd2d01;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #4e5166;
+    }
+  }
+
+  .addComment {
+    margin-left: auto;
+    background-color: #4e5166;
+    height: calc(100% + 2px);
+    border: 1px solid transparent;
+    transition: all 0.3s;
+
+    &:hover {
+      background: white;
+
+      i {
+        color: #4e5166;
+      }
+    }
+  }
+
+  .inputContainer {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #75778d;
+  }
+
+  .btnContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+
+    .btn {
+      display: flex;
+    }
+
+    .comments::placeholder {
+      color: #fff;
+    }
+
+    .comments {
+      background: #75778d;
+      color: white;
+      flex-grow: 1;
+      cursor: pointer;
+      padding: 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+      width: calc(100% - 41px);
+      border: none;
+    }
+  }
+
+  i {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.commentsWall {
+  width: 95%;
+  margin: 0 auto 2rem auto;
+  padding-top: 1rem;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+  position: relative;
+  border-top: 1px solid #ffd7d7;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s;
+}
+
+.postTitle {
+  margin-right: auto;
+}
+
+.heartContainer {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+
+  .length {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: -15px;
+    font-size: 0.8rem;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: red;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+
+  i {
+    padding: 0.75rem;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .like {
+    color: #ffd7d7;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .postContainer {
+    .post {
+      padding: 0.5rem;
+      .postHeader {
+        padding: 0.75rem;
+        img {
+        }
+      }
+
+      .postBody {
+        min-height: 100px;
+      }
+    }
+
+    .btnChevron {
+      bottom: -5px;
+    }
+    .commentsWall {
+      padding: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .postContainer {
+    .post {
+      .postHeader {
+        padding: 0.5rem;
+
+        img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+
+      .postBody {
+        min-height: 75px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .postContainer {
+    .post {
+      .postHeader {
+        font-size: 0.8rem;
+        img {
+        }
+      }
+
+      .postBody {
+        max-height: 160px;
+        overflow: hidden;
+      }
+
+      .btnContainer {
+
+        .btn {
+          margin-top: 0.5rem;
+          display: flex;
+          justify-content: center;
+
+          button,
+          div {
+            width: 25%;
+          }
+
+          .heartContainer {
+            display: flex;
+            justify-content: center;
+
+            i {
+              font-size: 1rem;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+.profilContainer {
+  background: #5d6079;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #fd2d01;
+  border-radius: 5px;
+  padding: 2rem;
+  width: 100%;
+  width: 700px;
+  height: 50vh;
+  min-height: 600px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .infosContainer {
+    border-top: 1px solid #ffd7d7;
+    width: 100%;
+    padding-top: 0.75rem;
+  }
+
+  .btnContainer {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    border-top: 1px solid #ffd7d7;
+    border-bottom: 1px solid #ffd7d7;
+  }
+
+  .btn {
+    color: #fff;
+    width: 50%;
+    cursor: pointer;
+    padding: 0.75rem 0;
+    font-weight: bold;
+    transition: all 0.3s;
+    background: transparent;
+    border: 1px solid transparent;
+    &:hover {
+      background: #ffd7d7;
+      color: #4e5166;
+    }
+  }
+
+  .deleteBtn {
+    &:hover {
+      background: #fd2d01;
+      color: #fff;
+    }
+
+    @media only screen and (max-width: 600px){
+      border-top: 1px solid #ffd7d7;
+    }
+  }
+
+  .lastnameContainer,
+  .firstnameContainer,
+  .ageContainer,
+  .bioContainer,
+  .roleContainer {
+    display: flex;
+    width: 100%;
+    padding: 0.25rem;
+
+    input,
+    .lastname,
+    .firstname,
+    .age,
+    .bio,
+    .role {
+      padding: 0.75rem 1.25rem;
+      color: white;
+      font-weight: 700;
+    }
+
+    input {
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      background: #75778d;
+
+      &:focus {
+        border: 1px dashed #fd2d01;
+      }
+    }
+
+    .lastname,
+    .firstname,
+    .age,
+    .bio,
+    .role {
+      width: 50%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+  }
+
+  .lastnameInput,
+  .firstnameInput,
+  .ageInput,
+  .mailInput,
+  .bioInput,
+  .roleInput {
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: box-shadow 0.3s;
+    box-shadow: 1px 1px 10px #ffd7d7;
+  }
+
+  .fileContainer {
+    width: 150px;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  input[type="file"] {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    @media only screen and (max-width: 600px) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    color: #fd2d01;
+    @media only screen and (max-width: 600px) {
+      width: 150px;
+      height: 150px;
+      text-align: center;
+    }
+  }
+}
+.pictureContainer {
+  position: relative;
+
+  img {
+    background: #fff;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .profilContainer {
+    width: 70%;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .profilContainer {
+    height: calc(95vh - 80px);
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .profilContainer {
+    .pictureContainer {
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    .infosContainer {
+      .lastname,
+      .firstname,
+      .age,
+      .bio,
+      .role {
+        width: 30%;
+        align-items: center;
+        justify-content: center;
+      }
+
+      input {
+        width: 50%;
+      }
+    }
+    .btnContainer {
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .profilContainer {
+    padding: 1rem;
+    .btnContainer {
+      button {
+        padding: 0.5rem;
+      }
+    }
+  }
+}

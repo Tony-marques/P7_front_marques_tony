@@ -97,7 +97,7 @@ const App = () => {
     >
       <ToggleAddContext.Provider value={{ toggleAdd, setToggleAdd }}>
         <div className="containerRoot">
-          <Router>
+          <Router basename="/P7_front_marques_tony/">
             <Navbar />
             <Routes>
               <Route exact path="/" element={<Home />} />

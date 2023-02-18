@@ -34,7 +34,7 @@ export default function Navbar() {
           <div
             className={styles.bgContainerold}
           >
-            <img className={styles.bgContainer} src={bg} alt="" />
+            <img className={styles.bgContainer} src={bg} alt="logo groupomania" />
           </div>
           <div className={`${styles.navcontainer}`}>
             <ul>

@@ -71,7 +71,7 @@ export default function User({ item }) {
 
   return (
     <div className={styles.user}>
-      <img src={item.image ? item.image : pp} alt="" className={styles.pp} />
+      <img src={item.image ? item.image : pp} alt="user-image" className={styles.pp} />
       <div className={styles.userInfos}>
         <div className={styles.top}>
           <div className={styles.name}>{item.name}</div>
